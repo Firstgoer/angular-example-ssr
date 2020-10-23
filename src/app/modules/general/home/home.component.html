@@ -29,7 +29,7 @@
       <h3 class="h6">Features&nbsp;&nbsp;<i class="fas fa-list"></i></h3>
     </div>
   </div>
-  
+
   <div class="row pt-2">
     <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let item of features">
       <div class="card bg-light mb-3">
@@ -50,5 +50,21 @@
         </a>
       </div>
     </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2" *ngFor="let button of bookNowButtons">
+      <div class="card bg-light mb-3" (click)="openWidget(button.params)">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-10 col-xl-10">
+                <h5 class="card-title">{{ button.title }}</h5>
+              </div>
+              <div class="col-2 col-xl-2">
+                <i class="{{ button.icon }} fa-lg text-primary"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Open book now button on click</p>
+          </div>
+      </div>
+    </div>
   </div>
-  

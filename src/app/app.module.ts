@@ -6,6 +6,13 @@ import { HomeComponent } from './modules/general/home/home.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 
+declare global {
+  // noinspection JSUnusedGlobalSymbols
+  interface Window {
+    OpenTrekksoftBookingWidget: (...params: any) => void;
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
